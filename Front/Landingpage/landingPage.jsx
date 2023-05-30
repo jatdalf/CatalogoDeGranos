@@ -1,15 +1,21 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image } from 'react-native';
-import FundacionSaberesImage from '../../assets/FundacionEducativaSaberes.png'
+import { Button } from "native-base";
+import Home from '../Home/Home'
 
 export default function LandingPage() {
+    function  gotoHome(){
+        //codigo para ir al home
+    }
+
+
+
     return (
-      <View style={styles.container}>
-        <Text>Landing page</Text>
-        <Image
-          style={styles.LandingImage}
-          source={require('../../assets/FundacionEducativaSaberes.png')}
-        />
+      <View style={styles.container}>        
+        <Image style={styles.LandingImage} source={require('../../assets/FundacionEducativaSaberes.png')}/>
+       
+            <Button size="xl" onPress={() => gotoHome()}>Inicio</Button>
+       
         <StatusBar style="auto" />
       </View>
     );
